@@ -1,5 +1,6 @@
 import React from 'react';
 import HeaderMain from "@/components/Common/HeaderThery";
+import RightNav from "@/components/Common/RightNav";
 import data from "@/components/Common/teoHw.js";
 
 const TheoryPage = () => (
@@ -10,7 +11,7 @@ const TheoryPage = () => (
     themTitle = {data[0].title}
     time = {data[0].timer}
     />
-
+< RightNav />
   </div>
 );
 

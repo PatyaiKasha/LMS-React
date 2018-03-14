@@ -16,7 +16,7 @@ export default class  HeaderMain extends React.Component {
             <div id="m-timers">
                 <div className="m-timer">
                     <p className="m-timer__time">
-                        <span id="m-timer">{time} мин</span>
+                        <span id="m-timer">{time}</span>
                         {/* <br> на прочтение </br> */}
                     </p>
                     <div className="m-timer__img icon" id="m-timer__img"></div>
