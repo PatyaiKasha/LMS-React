@@ -10,6 +10,7 @@ const TheoryPage = () => (
     themTitle = {data[0].title}
     time = {data[0].timer}
     />
+
   </div>
 );
 
