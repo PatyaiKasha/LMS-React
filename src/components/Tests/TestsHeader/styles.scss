@@ -48,7 +48,12 @@ $text-font: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
         color: $dark-text;
         background-color: $cyan;
     }
+
+    &__results {
+        margin-right: 152px;
+    }
 }
+
 .t-timer {
     display: flex;
     flex-direction: row;
