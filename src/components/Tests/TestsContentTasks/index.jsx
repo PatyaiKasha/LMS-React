@@ -10,7 +10,7 @@ import right_arrow from '../assets/right_arrow.gif';
 class TestsContentTasks extends React.Component {
   state = {
     quest_num: 1,
-    inputTestVariant: []
+    inputTestVariant: this.props.tests_list.map(test => test.answers[0])
   };
 
   _prevTest = (evt) => {
@@ -41,15 +41,16 @@ class TestsContentTasks extends React.Component {
 
 
   _handleInputChooseAnswer = (evt) => {
-    console.log(evt.target);
+    const value = evt.target.value;
+
     if (evt.target.checked) {
-      const value = evt.target.value;
+      const inputTestVariant = this.state.inputTestVariant;
+      inputTestVariant[evt.target.name] = evt.target.value;
       this.setState({
-        inputTestVariant: [...this.state.inputTestVariant, value] 
+        inputTestVariant: inputTestVariant 
       })
     }
     else {
-      const value = evt.target.value;
       this.setState({
         inputTestVariant: this.state.inputTestVariant.filter(genre => genre !== value)  
       })
@@ -57,7 +58,7 @@ class TestsContentTasks extends React.Component {
   };
 
   render() {
-    // console.log(this.state.inputTestVariant);
+    console.log(this.state.inputTestVariant);
 
     const { question_quan, tests_list } = this.props;
   	const { quest_num } = this.state;
@@ -75,7 +76,7 @@ class TestsContentTasks extends React.Component {
             {tests_list[test_index].answers.map((test, idx) => 
               <li className="t-answers__choice" key={idx}>
                 <label className="t-answers__label" htmlFor={`test${idx+1}`}>
-                  <input className="t-answers__item" name="quest" id={`test${idx+1}`} type="radio" value={test} onChange={this._handleInputChooseAnswer} />
+                  <input className="t-answers__item" name={test_index} id={`test${idx+1}`} type="radio" value={test} onChange={this._handleInputChooseAnswer} />
                   <span className="t-checkbox-custom"></span>
                   <span className="t-label">{test}</span>
                 </label>
@@ -107,3 +108,5 @@ TestsContentTasks.PropTypes = {
 }
 
 export default TestsContentTasks;
+
+// [...this.state.inputTestVariant, value] 
