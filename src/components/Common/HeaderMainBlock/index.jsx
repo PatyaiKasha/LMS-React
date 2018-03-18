@@ -1,5 +1,7 @@
 import React from 'react';
 import './styles.scss';
+import timerPng from './png/clock.png';
+
 
 export default class  HeaderMain extends React.Component {
   render() {
@@ -17,9 +19,9 @@ export default class  HeaderMain extends React.Component {
                 <div className="m-timer">
                     <p className="m-timer__time">
                         <span id="m-timer">{time}</span>
-                        {/* <br> на прочтение </br> */}
+                        <p> на прочтение </p>
                     </p>
-                    <div className="m-timer__img icon" id="m-timer__img"></div>
+                    <div className=" m-timer__img " id="m-timer__img"></div>
                 </div>
                 {/* <div>
                     <a href = "javascript:testRender()" className="m-btn-test button-small">к тестам!</a>
