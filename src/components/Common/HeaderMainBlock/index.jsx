@@ -4,6 +4,7 @@ import timerPng from './png/clock.png';
 
 
 export default class  HeaderMain extends React.Component {
+
   render() {
       const {module, themNum, themTitle, time} = this.props;
       return (
@@ -17,10 +18,10 @@ export default class  HeaderMain extends React.Component {
             </h2>
             <div id="m-timers">
                 <div className="m-timer">
-                    <p className="m-timer__time">
+                    <div className="m-timer__time">
                         <span id="m-timer">{time}</span>
-                        <p> на прочтение </p>
-                    </p>
+                        <p>на прочтение</p>
+                    </div>
                     <div className=" m-timer__img " id="m-timer__img"></div>
                 </div>
                 {/* <div>
