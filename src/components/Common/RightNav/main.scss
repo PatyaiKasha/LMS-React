@@ -5,3 +5,16 @@
 	width: 48px;
 	transition: 1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+
+.extraClass {
+	font-size: 16px !important;
+	color: #000;
+	background-color: #ff6c00 !important;
+		&.place-left {
+			&:after {
+				border-left-color: #ff6c00 !important;
+				border-left-style: solid !important;
+				border-left-width: 6px !important;
+			}
+		}
+   }
