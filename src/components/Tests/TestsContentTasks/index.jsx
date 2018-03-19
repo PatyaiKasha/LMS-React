@@ -37,26 +37,20 @@ class TestsContentTasks extends React.Component {
     this.setState({
       quest_num: evt.target.innerText
     })
-    this.props.selected_variants(this.state.inputTestVariant);
   };
 
 
   _handleInputChooseAnswer = (evt) => {
     const value = evt.target.value;
 
+    const inputTestVariant = this.state.inputTestVariant;
+    inputTestVariant[evt.target.name] = evt.target.value;
+    this.setState({
+      inputTestVariant: inputTestVariant 
+    })
 
-      const inputTestVariant = this.state.inputTestVariant;
-      inputTestVariant[evt.target.name] = evt.target.value;
-      this.setState({
-        inputTestVariant: inputTestVariant 
-      })
-
-
+    this.props.selected_variants(this.state.inputTestVariant);
   };
-
-  // componentDidUpdate() {
-  //   this.props.selected_variants(this.state.inputTestVariant);
-  // };
 
   render() {
     console.log(this.state.inputTestVariant);

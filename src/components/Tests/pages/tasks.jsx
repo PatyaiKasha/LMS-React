@@ -23,7 +23,6 @@ export default class TasksPageTests extends React.Component {
     this.setState({
       userTestAnswers: tests
     })
-    console.log(this.state.userTestAnswers);
   };
 
   render() {
