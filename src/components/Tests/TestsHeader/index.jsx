@@ -4,10 +4,7 @@ import './styles.scss';
 import clockPic from '../assets/clock.png';
 
 
-class TestsHeader extends React.Component {
-  render() {
-  	const { theme_number, theme_title } = this.props;
-
+const TestsHeader = ({ theme_number, theme_title, children }) => {
     return (
     	<div className="t-header">
 		    <div className="t-title">  
@@ -18,12 +15,11 @@ class TestsHeader extends React.Component {
 		        <h2 className="t-theme__name">{theme_title}</h2>
 		    </div>
 		    <div className="t-timer">
-		        <p className="t-timer__time">{this.props.children}</p>
+		        <p className="t-timer__time">{children}</p>
 		        <img className="t-timer__clock" src={clockPic} alt="clock-img"/>
 		    </div>
 		</div>
     );
-  }
 }
 
 TestsHeader.PropTypes = {

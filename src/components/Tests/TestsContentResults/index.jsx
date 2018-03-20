@@ -7,53 +7,59 @@ import left_arrow from '../assets/left_arrow.gif';
 import right_arrow from '../assets/right_arrow.gif';
 
 
-class TestsContentResults extends React.Component {
+const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) => {
+  
+  let corectAnswers = tests_list.map((test, idx) => test.correctAnswer);
 
-  render() {
-    const { question_quan, tests_list, prepared_variants } = this.props;
+  let compareAnswers = corectAnswers.map((test, idx) => test == prepared_variants[idx] ? 1 : 0
+  );
 
-    // console.log(prepared_variants);
-    // console.log(tests_list.map((test, idx) => 
-    //   test.correctAnswer
-    // ));
+  let numOfCortAnsw = compareAnswers.reduce(function(sum, current) {
+    return sum + current;
+  }, 0);
 
-    let corectAnswers = tests_list.map((test, idx) => test.correctAnswer);
+  console.log(compareAnswers);
 
-    console.log(corectAnswers);
+  return (
+  	<div className="t-content t-content--margin">
+      <div className="t-results">
+          <p className="t-results__marks" id="result-test">{numOfCortAnsw}/{question_quan} баллов</p>
+          <p className="t-results__summ-time">пройдено за 14:25 минут</p>
+      </div>
 
-    let compareAnswers = corectAnswers.map((test, idx) => test == prepared_variants[idx] ? 1 : 0
-    );
+      <div className="t-mistakes">
+          <ul className="t-mistakes__list">
 
-    let numOfCortAnsw = compareAnswers.reduce(function(sum, current) {
-      return sum + current;
-    }, 0);
+            {compareAnswers.map((test, idx) => {
+              if (test === 1) {
+                return (<li className="t-mistakes__description" key={idx + 1}>
+                  <span className="t-mistakes__numbers">{idx + 1}. {prepared_variants[idx]}</span>
+                </li>)
+              }
+              else {
+                if (prepared_variants[idx] !== '') {
+                  return (<li className="t-mistakes__description" key={idx + 1}>
+                    <span className="t-mistakes__numbers t-mistakes__numbers-wrong">{idx + 1}. {prepared_variants[idx]}</span>
+                    <p className="t-mistakes__explanation">Советуем почитать тут: <span className="t-mistakes__link">[<a href="#">ссылка</a>]</span></p>
+                  </li>)
+                }
+                else {
+                  return (<li className="t-mistakes__description" key={idx + 1}>
+                    <span className="t-mistakes__numbers t-mistakes__numbers-undef">{idx + 1}. Вариант не указан</span>
+                    <p className="t-mistakes__explanation">Советуем почитать тут: <span className="t-mistakes__link">[<a href="#">ссылка</a>]</span></p>
+                  </li>)
+                }
+              }  
+            })}
 
-    return (
-    	<div className="t-content t-content--margin">
-        <div className="t-results">
-            <p className="t-results__marks" id="result-test">{numOfCortAnsw}/{question_quan} баллов</p>
-            <p className="t-results__summ-time">пройдено за 14:25 минут</p>
-        </div>
+          </ul>
+      </div>
 
-        <div className="t-mistakes">
-            <ul className="t-mistakes__list">
-
-              {tests_list.map((test, idx) => 
-                <li className="t-mistakes__description" key={idx + 1}>
-                  <span className="t-mistakes__numbers t-mistakes__numbers-wrong">{test.id}</span>{test.correctAnswer}
-                  <p className="t-mistakes__explanation">Советуем почитать тут: <span className="t-mistakes__link">[<a href="#">ссылка</a>]</span></p>
-                </li>
-              )}
-
-            </ul>
-        </div>
-
-        <Link to="/tests/tasks">
-          <button className="button-big">Пройти ещё раз</button>
-        </Link>
-    </div>
-    );
-  }
+      <Link to="/tests/tasks">
+        <button className="button-big">Пройти ещё раз</button>
+      </Link>
+  </div>
+  );
 }
 
 TestsContentResults.PropTypes = {

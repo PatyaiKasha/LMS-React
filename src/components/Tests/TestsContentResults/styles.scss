@@ -72,6 +72,11 @@ $text-font: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
         font-family: $text-font;
     }
 
+    &__numbers-undef {
+        color: $orange;
+        font-family: $text-font;
+    }
+
     &__explanation {
         margin-top: 10px;
         margin-left: 45px;

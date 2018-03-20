@@ -55,7 +55,7 @@ class TestsContentTasks extends React.Component {
   render() {
     console.log(this.state.inputTestVariant);
     const { question_quan, tests_list } = this.props;
-  	const { quest_num } = this.state;
+  	const { quest_num, inputTestVariant } = this.state;
 
     const test_index = quest_num -1;
 
@@ -66,17 +66,17 @@ class TestsContentTasks extends React.Component {
           <h3 className="t-question__task">{tests_list[test_index].title}</h3> 
         </div>
 
-          <ul className="t-answers">
-            {tests_list[test_index].answers.map((test, idx) => 
-              <li className="t-answers__choice" key={idx}>
-                <label className="t-answers__label" htmlFor={`test${idx+1}`}>
-                  <input className="t-answers__item" name={test_index} id={`test${idx+1}`} type="radio" value={test} onClick={this._handleInputChooseAnswer} />
-                  <span className="t-checkbox-custom"></span>
-                  <span className="t-label">{test}</span>
-                </label>
-              </li>
-            )}
-          </ul>
+        <ul className="t-answers">
+          {tests_list[test_index].answers.map((test, idx) => 
+            <li className="t-answers__choice" key={idx}>
+              <label className="t-answers__label" htmlFor={`test${idx+1}`}>
+                <input className="t-answers__item" name={test_index} id={`test${idx+1}`} type="radio" value={test} checked={test == inputTestVariant[test_index]} onClick={this._handleInputChooseAnswer} />
+                <span className="t-checkbox-custom"></span>
+                <span className="t-label">{test}</span>
+              </label>
+            </li>           
+          )}
+        </ul>
 
         <div className="t-navigation">
           <div className="t-navigation__arrows">
@@ -85,8 +85,18 @@ class TestsContentTasks extends React.Component {
           </div>
           <ul className="t-navigation__pagination">
             <li className="t-navigation__number t-navigation__number--arrow" onClick={this._prevTest}><img src={left_arrow} alt="left_arrow" /></li>
-            {tests_list.map((test, idx) => 
-              <li className="t-navigation__number t-navigation__number--blue" key={idx + 1} onClick={this._chooseTest} >{idx + 1}</li>
+            {tests_list.map((test, idx) => {
+              if (idx === test_index) {
+                return (
+                  <li className="t-navigation__number t-navigation__number--blue" key={idx + 1} onClick={this._chooseTest} >{idx + 1}</li>
+                );
+              }
+              else {
+                return (
+                  <li className="t-navigation__number" key={idx + 1} onClick={this._chooseTest} >{idx + 1}</li>
+                );
+              }
+            }
             )}
             <li className="t-navigation__number t-navigation__number--arrow" onClick={this._nextTest}><img src={right_arrow} alt="right_arrow" /></li>
           </ul>
