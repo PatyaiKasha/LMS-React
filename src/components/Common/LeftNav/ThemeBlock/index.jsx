@@ -1,20 +1,26 @@
 import React from 'react';
 import './styles.scss';
 
-import SkillBlock from './SkillBlock';
+import Theme from '../Theme';
 
-export default class LeftNav extends React.Component {
-  render() {
-    return (
-      <div className="left-nav">
-          <SkillBlock/>
-      </div>
-    );
-  }
-}
+const themes = ['[Тема 1_]','[Тема 2_]','[Тема 3_]'];
+
+const ThemeBlock = () => {
+  return (
 
 
-// {/*<ul className="c-accordion-menu">*/}
+      <ul className="c-accordion-menu__submenu">
+        {themes.map(item => <Theme key={item} theme={item} />)}
+        <div id="add-material" className="c-accordion-menu__button_add-material"></div>
+      </ul>
+
+
+  );
+};
+
+export default ThemeBlock;
+
+// {/*<div>*/}
 //   {/*<li className="c-accordion-menu__block">*/}
 //     {/*<input type="checkbox" name="tech-skills" id="tech-skills"/>*/}
 //     {/*<label htmlFor="tech-skills" className="c-accordion-menu__button">tech skills</label>*/}
@@ -131,7 +137,7 @@ export default class LeftNav extends React.Component {
 //       {/*</li>*/}
 //       {/*<li className="c-accordion-menu__submenu-block">*/}
 //         {/*<input type="checkbox" name="soft-skills-themes" id="soft-skills-theme-2"/>*/}
-//         {/*<label htmlFor="soft-skills-theme-2" className="c-accordion-menu__submenu-button">[Тема 2_]</label>*/}
+//         {/*<label htmlFor="soft-skills-theme-2" className="c-accord  ion-menu__submenu-button">[Тема 2_]</label>*/}
 //       {/*</li>*/}
 //       {/*<li className="c-accordion-menu__submenu-block">*/}
 //         {/*<input type="checkbox" name="soft-skills-themes" id="soft-skills-theme-3"/>*/}
@@ -157,4 +163,4 @@ export default class LeftNav extends React.Component {
 //       {/*</li>*/}
 //     {/*</ul>*/}
 //   {/*</li>*/}
-// {/*</ul>*/}
+// {/*</div>*/}
