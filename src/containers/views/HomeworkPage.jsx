@@ -1,6 +1,7 @@
 
 import React from 'react';
 import HeaderMain from "@/components/Common/HeaderMainBlock";
+import ContentMain from "@/components/HomeWork/ContentHomework";
 import RightNav from "@/components/Common/RightNav";
 import data from "@/components/Common/teoHw.js";
 
@@ -11,7 +12,11 @@ const HomeworkPage = () => (
     themNum = {data[1].number}
     themTitle = {data[1].title}
     time = {data[1].timer}
-    />
+     />
+
+     < ContentMain
+    textq = {data[1].text}
+     />
     <RightNav />
   </div>
 );
