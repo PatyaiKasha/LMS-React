@@ -81,7 +81,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(otf|ttf|eot)(\?[a-z0-9#=&.]+)?$/,
+        test: /\.(otf|ttf|eot|woff|woff2)(\?[a-z0-9#=&.]+)?$/,
         include: SRC_DIR,
         use: [
           {

@@ -1,20 +1,17 @@
 import React from 'react';
 import './styles.scss';
-
 import Theme from '../Theme';
+import ButtonAdd from '../ButtonAdd';
+
 
 const themes = ['[Тема 1_]','[Тема 2_]','[Тема 3_]'];
 
 const ThemeBlock = () => {
   return (
-
-
       <ul className="c-accordion-menu__submenu">
         {themes.map(item => <Theme key={item} theme={item} />)}
-        <div id="add-material" className="c-accordion-menu__button_add-material"></div>
+        <ButtonAdd/>
       </ul>
-
-
   );
 };
 

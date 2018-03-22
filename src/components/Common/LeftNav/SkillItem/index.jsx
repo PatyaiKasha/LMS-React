@@ -1,101 +1,21 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import './styles.scss';
-// import items from '../themeContentDB';
-
 import ThemeBlock from '../ThemeBlock';
 
 const SkillItem = ({skill}) => {
   return (
-
-  <div>
-    <li className="c-accordion-menu__block">
-      <input type="checkbox" name="tech-skills" id="tech-skills"/>
-      <label htmlFor="tech-skills" className="c-accordion-menu__button">{skill}</label>
-
-      <ThemeBlock/>
-
-      {/*<ul className="c-accordion-menu__submenu">*/}
-        {/*<li className="c-accordion-menu__submenu-block">*/}
-          {/*<input type="checkbox" name="tech-skills-theme-1" id="tech-skills-theme-1"/>*/}
-          {/*<label htmlFor="tech-skills-theme-1" className="c-accordion-menu__submenu-button">[Тема 1_]*/}
-
-            {/*<div className="admin-editor__instruments"></div>*/}
-            {/*<div className="c-notifications c-notifications-hidden-theme">[Тема 1_]</div>*/}
-          {/*</label>*/}
-          {/*<ul className="c-accordion-menu__submenu">*/}
-            {/*{items.map(item => (*/}
-              {/*<li className="c-accordion-menu__submenu-item"*/}
-                  {/*key={item.module}*/}
-              {/*>*/}
-                {/*<NavLink*/}
-                  {/*exact*/}
-                  {/*data={item.module}*/}
-                  {/*to={item.link}*/}
-                {/*>*/}
-                  {/*{item.text}*/}
-                {/*</NavLink>*/}
-              {/*</li>*/}
-            {/*))}*/}
-
-          {/*</ul>*/}
-        {/*</li>*/}
-
-
-        {/*<div id="add-material" className="c-accordion-menu__button_add-material"></div>*/}
-      {/*</ul>*/}
-    </li>
-    {/*<li className="c-accordion-menu__block">*/}
-      {/*<input type="checkbox" name="soft-skills" id="soft-skills"/>*/}
-      {/*<label htmlFor="soft-skills" className="c-accordion-menu__button">soft skills</label>*/}
-      {/*<ul className="c-accordion-menu__submenu">*/}
-        {/*<li className="c-accordion-menu__submenu-block">*/}
-          {/*<input type="checkbox" name="soft-skills-themes" id="soft-skills-theme-1"/>*/}
-          {/*<label htmlFor="soft-skills-theme-1" className="c-accordion-menu__submenu-button">[Тема 1_]</label>*/}
-        {/*</li>*/}
-        {/*<li className="c-accordion-menu__submenu-block">*/}
-          {/*<input type="checkbox" name="soft-skills-themes" id="soft-skills-theme-2"/>*/}
-          {/*<label htmlFor="soft-skills-theme-2" className="c-accord  ion-menu__submenu-button">[Тема 2_]</label>*/}
-        {/*</li>*/}
-        {/*<li className="c-accordion-menu__submenu-block">*/}
-          {/*<input type="checkbox" name="soft-skills-themes" id="soft-skills-theme-3"/>*/}
-          {/*<label htmlFor="soft-skills-theme-3" className="c-accordion-menu__submenu-button">[Тема 3_]</label>*/}
-        {/*</li>*/}
-      {/*</ul>*/}
-    {/*</li>*/}
-    {/*<li className="c-accordion-menu__block">*/}
-      {/*<input type="checkbox" name="english" id="english"/>*/}
-      {/*<label htmlFor="english" className="c-accordion-menu__button c-accordion-menu__button_last">english</label>*/}
-      {/*<ul className="c-accordion-menu__submenu">*/}
-        {/*<li className="c-accordion-menu__submenu-block">*/}
-          {/*<input type="checkbox" name="english-themes" id="english-theme-1"/>*/}
-          {/*<label htmlFor="english-theme-1" className="c-accordion-menu__submenu-button">[Тема 1_]</label>*/}
-        {/*</li>*/}
-        {/*<li className="c-accordion-menu__submenu-block">*/}
-          {/*<input type="checkbox" name="english-themes" id="english-theme-2"/>*/}
-          {/*<label htmlFor="english-theme-2" className="c-accordion-menu__submenu-button">[Тема 2_]</label>*/}
-        {/*</li>*/}
-        {/*<li className="c-accordion-menu__submenu-block">*/}
-          {/*<input type="checkbox" name="english-themes" id="english-theme-3"/>*/}
-          {/*<label htmlFor="english-theme-3" className="c-accordion-menu__submenu-button">[Тема 3_]</label>*/}
-        {/*</li>*/}
-      {/*</ul>*/}
-    {/*</li>*/}
-  </div>
-
-
-    );
+    <div>
+      <li className="c-accordion-menu__block">
+        <input type="checkbox" name="tech-skills" id="tech-skills"/>
+        <label htmlFor="tech-skills" className="c-accordion-menu__button">{skill}</label>
+        <ThemeBlock/>
+      </li>
+    </div>
+  );
 };
 
 export default SkillItem;
-
-// {/*<div>*/}
-// {/*<li className="c-accordion-menu__block">*/}
-// {/*<input type="checkbox" name="tech-skills" id="tech-skills"/>*/}
-// {/*<label htmlFor="tech-skills" className="c-accordion-menu__button">{skill}</label>*/}
-// {/*</li>*/}
-// {/*</div>*/}
-
 
 
 // {/*<div>*/}
