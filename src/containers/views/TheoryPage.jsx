@@ -14,8 +14,8 @@ const TheoryPage = () => (
     />
 < RightNav />
 < Content
-content = {data[0] contentTitle.content}
-text = {data[0].content}
+  content = {data[0].content[0].contentTitle}
+  text = {data[0].content[0].contentText}
 />
   </div>
 );
