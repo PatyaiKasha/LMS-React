@@ -1,0 +1,16 @@
+@import '../../../styles/_var.scss';
+
+// Calendar HEADER
+.c-calendar__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 112px;
+}
+
+.c-calendar__transparent {
+  display: flex;
+  min-height: 40px;
+  width: 168px;
+}

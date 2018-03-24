@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
@@ -8,7 +7,6 @@ import BoardPage from '@/containers/views/BoardPage';
 import HomeworkPage from '@/containers/views/HomeworkPage';
 import TestPage from '@/containers/views/TestPage';
 import TheoryPage from '@/containers/views/TheoryPage';
-
 
 export default (
   <Switch>
@@ -21,4 +19,3 @@ export default (
     <Route render={() => <h1>PAGE NOT FOUND!</h1>} />
   </Switch>
 );
-

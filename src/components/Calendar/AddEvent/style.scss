@@ -1,0 +1,10 @@
+@import '../../../styles/_var.scss';
+
+//Add event button
+.c-calendar__btn-add-event {
+  display: flex;
+  border-radius: 16px;
+  padding: 8px;
+  background-color: $orange;
+  cursor: pointer;
+}

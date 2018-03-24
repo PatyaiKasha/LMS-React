@@ -6,12 +6,12 @@ import App from '@/components/App';
 
 const propTypes = {
   history: PropTypes.object.isRequired,
- };
+};
 
-const RootContainer = ({history }) => (
-    <Router history={history}>
-      <Route path="/" component={App} />
-    </Router>
+const RootContainer = ({ history }) => (
+  <Router history={history}>
+    <Route path="/" component={App} />
+  </Router>
 );
 
 RootContainer.propTypes = propTypes;
