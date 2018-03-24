@@ -1,0 +1,19 @@
+@import '../../../styles/_var.scss';
+
+//Name day of a week BLOCK-WEEK
+.c-calendar__week-day-name {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: $white;
+  font-family: $text-font;
+  padding: 0 0 24px;
+}
+
+//Name day of a week EACH-DAY
+.c-calendar__day-name {
+  display: flex;
+  flex-basis: 14%;
+  padding-left: 8px;
+  flex-shrink: 1;
+}
