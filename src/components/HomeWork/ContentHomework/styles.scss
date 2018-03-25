@@ -1,10 +1,15 @@
 @import "src/styles/_var.scss";
-
 .ContentHomework {
-	padding: 20px;
-	font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
-	margin-bottom: 16px;
-	text-align: justify;
-	color: gray;
-	
+    // padding: 20px;
+    // font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
+    // margin-bottom: 16px;
+    // text-align: justify;
+    // color: gray;
+    min-height: 300px;
+    padding-top: 15px;
+    font-family: $text-font;
+    font-size: 16px;
+    color: $dark-text;
+    width: 75%;
+    margin: 0 auto;
 }
