@@ -16,6 +16,7 @@ const HomeworkPage = () => (
 
      < ContentMain
     textq = {data[1].text}
+    pointBal = {data[1].pointBal}
      />
     <RightNav />
   </div>
