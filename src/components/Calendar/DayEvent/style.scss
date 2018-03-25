@@ -1,0 +1,15 @@
+@import '../../../styles/_var.scss';
+
+.c-calendar__task {
+  display: flex;
+  justify-content: center;
+  font-family: $text-font;
+  font-size: 10px;
+  color: $white;
+  background: #7c4dff;
+  padding: 1px 2px;
+  border-radius: 8px;
+  &_mt {
+    margin-top: 4px;
+  }
+}

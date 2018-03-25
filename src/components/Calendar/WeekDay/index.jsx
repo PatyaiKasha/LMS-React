@@ -10,7 +10,11 @@ const wDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
 
 const WeekDay = props => (
   <ul className="c-calendar__week-day-name">
-    {wDays.map(wDay => <li className="c-calendar__day-name">{wDay}</li>)}
+    {wDays.map(wDay => (
+      <li key={wDay} className="c-calendar__day-name">
+        {wDay}
+      </li>
+    ))}
   </ul>
 );
 

@@ -1,0 +1,23 @@
+@import '../../../styles/_var.scss';
+
+//Number of a day EACH-DAY INNER
+.c-day-num {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  min-height: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: $white;
+  background-color: $dark-bg; //today
+  &_today {
+    background: $orange;
+  }
+  // Next month day
+  &_prev-month,
+  &_next-month {
+    padding: 4px;
+    color: $light-text;
+  }
+}

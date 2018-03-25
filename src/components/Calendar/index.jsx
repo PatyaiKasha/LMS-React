@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 // Components
 import CalendarHeader from './CalendarHeader';
 import WeekDay from './WeekDay';
+import Month from './Month';
 
 // Instruments
 import './style.scss';
@@ -21,6 +22,7 @@ class Calendar extends Component {
       <div className="c-calendar">
         <CalendarHeader />
         <WeekDay />
+        <Month />
       </div>
     );
   }

@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components
-import CalendarData from '../CalendarData';
+import HeaderData from '../HeaderData';
 import AddEvent from '../AddEvent';
 
 // Instruments
@@ -13,7 +13,7 @@ const Transparent = () => <div className="c-calendar__transparent" />;
 const CalendarHeader = props => (
   <div className="c-calendar__header">
     <Transparent />
-    <CalendarData />
+    <HeaderData />
     <AddEvent />
   </div>
 );
