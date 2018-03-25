@@ -22,6 +22,7 @@
     letter-spacing: 2px;
     line-height: 48px;
     font-weight: bold;
+    padding: 50px 0;
 }
 .d-rating__digit {
     font-weight: bold;
@@ -116,4 +117,11 @@
     background: #ff6c00;
     border-radius: 10px;
 }
+.d-homework {
+    padding: 32px;
+}
 
+.d-comments {
+    width: 60%;
+    margin: 200px auto 0;
+}
