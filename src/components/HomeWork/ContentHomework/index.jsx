@@ -19,8 +19,8 @@ export default class  ContentMain extends React.Component {
                         <div classNme="d-comments">
                             <form className="d-comments-form" action="#" method="post">
                             <p className="d-rating__line">&lt;Оценка&gt;
-                        <span className="d-rating__digit">{pointBal}/10</span> 
-                        баллов</p>
+                        <span className="d-rating__digit"> {pointBal}/10 </span> 
+                        health points</p>
                                 <label className="d-comments__name"></label>
                                 <input className="d-comments__title" type="text" name="d-comments" value="" placeholder="Написать комментарий"></input>
                                 <button className="d-comments__send" type="submit" name="d-sub" value="sent">Отправить</button>
