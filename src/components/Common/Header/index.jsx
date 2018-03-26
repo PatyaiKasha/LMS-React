@@ -2,22 +2,34 @@ import React from 'react';
 import Logo from '@/components/Common/Header/Logo';
 import NavBar from '@/components/Common/Header/NavBar';
 import NavBarNotification from '@/components/Common/Header/NavBarNotification';
+import HeaderProfile from '@/components/Common/Header/HeaderProfile';
 import PhotoProfile from '@/components/Common/Header/PhotoProfile';
+import ProfileBlock from '@/components/Common/Header/ProfileBlock';
+import HeaderProfileWindow from '@/components/Common/Header/HeaderProfileWindow';
 import './styles.scss';
 
 export default class Header extends React.Component {
   render() {
     return (
-      <header className="Header">
-        <Logo />
-        <NavBar>
-          <NavBarNotification />
-          </NavBar>  
-        <PhotoProfile />
-      </header>
+      <div className="Wrapper">
+        <div className="Container">
+          <header className="Header">
+            <Logo />
+              <NavBar>
+                <NavBarNotification />
+              </NavBar>
+              <HeaderProfile>  
+                <PhotoProfile />
+                <ProfileBlock myProfile={'my profile'} signOut={'sign out'}/>
+                <HeaderProfileWindow />
+              </HeaderProfile>
+          </header> 
+        </div>
+      </div>
     );
   }
 }
+
 /* <div className="wrapper">
 <div className="container">
   <div className="header">

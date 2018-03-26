@@ -1,11 +1,18 @@
 @import "../../../styles/var";
 
+.Wrapper {
+  min-width: 1024px;
+  background-color: $dark-bg;
+}
+.Container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
 .Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 1024px;
   min-height: 128px;
   padding: 40px;
-  background-color: $dark-bg;
 }

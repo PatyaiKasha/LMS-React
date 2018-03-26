@@ -10,7 +10,7 @@ export default class PhotoProfile extends React.Component {
                 <NavLink
                     exact
                     className="PhotoProfile"
-                    to={'/'}
+                    to={'/my-profile'}
                 >
                 <div className="PhotoProfile__circle"></div>
                 <div className="PhotoProfile__semicircle"></div>
