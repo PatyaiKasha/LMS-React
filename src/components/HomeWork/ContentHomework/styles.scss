@@ -5,7 +5,7 @@
     // margin-bottom: 16px;
     // text-align: justify;
     // color: gray;
-    min-height: 300px;
+    min-height: 200px;
     padding-top: 15px;
     font-family: $text-font;
     font-size: 16px;
@@ -13,6 +13,26 @@
     width: 75%;
     margin: 0 auto;
 }
+.d-rating {
+    width: 60%;
+    margin: 16px auto 0;
+}
+.d-rating-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
 .d-rating__line {
     color: #202b52;
     font-size: 36px;
@@ -94,6 +114,18 @@
     background: #ff6c00;
     border-radius: 10px;
 }
+.d-comments {
+    width: 60%;
+    margin: 50px auto 0;
+}
+.d-comments-form {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
 .d-comments__title {
     width: 70%;
     font-family: "Museo Sans Cyrl W03 300", "Arial", sans-serif;
@@ -121,7 +153,3 @@
     padding: 32px;
 }
 
-.d-comments {
-    width: 60%;
-    margin: 200px auto 0;
-}
