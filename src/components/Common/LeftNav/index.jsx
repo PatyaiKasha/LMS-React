@@ -1,19 +1,17 @@
 import React from 'react';
-import './styles.scss';
-
 import SkillBlock from './SkillBlock';
+import './styles.scss';
 
 export default class LeftNav extends React.Component {
   render() {
     return (
       <div className="left-nav">
-          <SkillBlock/>
+        <SkillBlock />
       </div>
     );
   }
 }
 
-//
 
 // {/*<ul className="c-accordion-menu">*/}
 //   {/*<li className="c-accordion-menu__block">*/}

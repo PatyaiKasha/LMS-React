@@ -1,8 +1,8 @@
 import React from 'react';
-import './styles.scss';
 import {NavLink} from 'react-router-dom';
+import './styles.scss';
 
-const ThemeItem = ({link, module, text}) => {
+const ThemeItem = ({ link, module, text }) => {
   return (
     <li className="c-accordion-menu__submenu-item"
     >
