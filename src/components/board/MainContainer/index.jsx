@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '@/components/board/Header';
 import Addpost from '@/components/board/addPost';
+import Post from '@/components/board/Post';
 import './styles.scss';
 
 import PostList from "../PostList";

@@ -4,12 +4,13 @@ import Content from '../Content/';
 import './styles.scss';
 
 
-const Post = () => (
-    <div className="post">
-      <User name={'Petya'} role={'Student'} />
-      <Content />
-    </div>
-  );
+const Post = () => {
+    return (
+        <div className="post">
+            <User name={'Petya'} role={'Student'}/>
+            <Content />
+        </div>)
+};
 
 
 export default Post;

@@ -8,7 +8,6 @@ class CommentList extends Component {
         <Comment />
         );
     }
-
 }
 
 export default CommentList;

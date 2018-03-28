@@ -18,19 +18,18 @@ export default class Content extends Component {
     _openComment = () => {
         this.setState(prevState => ({
             isOpen: !prevState.isOpen
-        }),console.log('isOpen', this.state.isOpen))
-    }
+        })
+    )}
 
-  render() {
-    return (
-      <div className="contents post-contents">
-        <PostContentHeader />
-        <DateStamp />
-        <ContentText />
-        <Counter />
-        {this.state.isOpen ? <CommentList /> : null}
-          <Pointer toggle={this._openComment}/>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="contents post-contents">
+            <PostContentHeader/>
+            <DateStamp/>
+            <ContentText/>
+            <Counter/>
+            {this.state.isOpen ? <CommentList /> : null }
+            <Pointer toggle={this._openComment}/>
+        </div>);
+    }
 }
