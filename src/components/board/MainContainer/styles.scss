@@ -1,0 +1,9 @@
+@import "../../../styles/var";
+.post-wrapper {
+  margin: auto;
+  background: $light-gray;
+
+  &--middle-grey {
+    background: $middle-grey;
+  }
+}

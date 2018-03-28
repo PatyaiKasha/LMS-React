@@ -3,6 +3,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import ProfilePage from '@/containers/views/ProfilePage';
+import EditProfile from '@/containers/views/EditProfilePage';
 import CalendarPage from '@/containers/views/CalendarPage';
 import BoardPage from '@/containers/views/BoardPage';
 import HomeworkPage from '@/containers/views/HomeworkPage';
@@ -13,6 +14,7 @@ import TheoryPage from '@/containers/views/TheoryPage';
 export default (
   <Switch>
     <Route exact path="/" component={ProfilePage} />
+    <Route exact path="/editprofile" component={EditProfile} />
     <Route exact path="/calendar" component={CalendarPage} />
     <Route exact path="/board" component={BoardPage} />
     <Route exact path="/homework" component={HomeworkPage} />
@@ -21,4 +23,3 @@ export default (
     <Route render={() => <h1>PAGE NOT FOUND!</h1>} />
   </Switch>
 );
-
