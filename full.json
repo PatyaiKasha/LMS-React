@@ -486,7 +486,7 @@
   ],
   "comments": [
     {
-      "postID": 1,
+      "postID": 4,
       "id": 1,
       "isNew": true,
       "date": "26/01/2018",
@@ -502,13 +502,13 @@
       "changed": false
     },
     {
-      "postID": 1,
+      "postID": 4,
       "id": 2,
       "isNew": true,
       "date": "26/01/2018",
       "time": "22:30",
       "userID": 2,
-      "userName": "Misha Ivanov",
+      "userName": "Kosya Vasolok",
       "userRole": "Student",
       "message": "Second comment",
       "likes": 5,
@@ -550,7 +550,7 @@
       "id": 4
     },
     {
-      "postID": 1,
+      "postID": 3,
       "isNew": true,
       "date": "06/02/2018",
       "time": "13:43",
