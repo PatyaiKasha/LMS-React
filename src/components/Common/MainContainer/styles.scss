@@ -15,9 +15,10 @@
 
 .main {
   width: 100%;
-  //position: relative;
+  position: relative;
   min-height: 150px;
   margin-left: 40px;
+  padding: 40px;
   background-color: $light-gray;
   flex-basis: 85%;
 }
