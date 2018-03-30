@@ -22,6 +22,7 @@ export default class Content extends Component {
 
   render() {
       let { id, title, date, time, message, likes, comments} = this.props
+      const { isOpen } = this.state;
     return (
       <div className="contents post-contents">
         <PostContentHeader title = {title} />
@@ -29,7 +30,7 @@ export default class Content extends Component {
         <ContentText text={message} />
         <Counter likes = {likes} comments = {comments} />
         {this.state.isOpen ? <CommentList id={id} /> : null}
-          <Pointer toggle={this._openComment}/>
+          <Pointer toggle={this._openComment} isOpen={isOpen}/>
       </div>
     );
   }

@@ -11,13 +11,13 @@ import './style.scss'
 class Comment extends Component {
 
 render() {
-    // const { userName, userRole, likes, date, time, message } = this.props;
     const { userName, userRole, ...props } = this.props;
     return (
         <div className="Comment">
             <User name={userName} role={userRole}/>
             <CommentContent {...props}/>
-        </div>);
+        </div>
+    );
     }
 }
 

@@ -15,10 +15,13 @@ export default class CommentList extends Component {
             } else {
                 throw new Error('Error while fetching' + response.statusText)
             }
-        }).then(data => {
+        })
+        .then(data => {
             this.setState({comments: data})
-        }).catch(err => console.error(err))
+        })
+        .catch(err => console.error(err))
     }
+    
     render() {
         const {id} = this.props;
         return (
