@@ -13,15 +13,15 @@ export default class Header extends React.Component {
     return (
       <div className="Wrapper">
         <div className="Container">
-          <header className="Header">
+          <header className="HeaderCommon">
             <Logo />
               <NavBar>
-                <NavBarNotification />
+                {/* <NavBarNotification /> */}
               </NavBar>
               <HeaderProfile>  
                 <PhotoProfile />
                 <ProfileBlock myProfile={'my profile'} signOut={'sign out'}/>
-                <HeaderProfileWindow />
+                {/* <HeaderProfileWindow /> */}
               </HeaderProfile>
           </header> 
         </div>

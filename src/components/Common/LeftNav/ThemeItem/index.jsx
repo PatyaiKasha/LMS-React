@@ -4,9 +4,9 @@ import './styles.scss';
 
 const ThemeItem = ({ link, module, text }) => {
   return (
-    <li className="c-accordion-menu__submenu-item"
+    <li
     >
-      <NavLink
+      <NavLink className="c-accordion-menu__submenu-item"
         exact
         data={module}
         to={link}

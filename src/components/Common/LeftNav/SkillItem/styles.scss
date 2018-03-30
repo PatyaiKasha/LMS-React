@@ -1,4 +1,4 @@
-@import "../../../../styles/var";
+@import "../../../../styles/var.scss";
 
 .c-accordion-menu__button {
     position: relative;
@@ -40,7 +40,7 @@
       position: absolute;
       opacity: 0;
     }
-    input[type=checkbox]:checked + .c-accordion-menu__button + .c-accordion-menu__submenu, input[type=checkbox]:checked + .c-accordion-menu__submenu-button + .c-accordion-menu__submenu {
+    input[type=checkbox]:checked + .c-accordion-menu__button {
       /* show children when item is checked */
       display: flex;
       flex-direction: column;

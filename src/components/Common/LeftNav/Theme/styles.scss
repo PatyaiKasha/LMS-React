@@ -20,7 +20,7 @@
         left: 0;
         width: 16px;
         height: 16px;
-        //background: url(../img/submenu-arrow-left.svg) no-repeat;
+        background: url(img/submenu-arrow-left.svg) no-repeat;
         content: '';
       }
       &:hover > .admin-editor__instruments {
@@ -52,11 +52,19 @@
     input[type=checkbox]:checked + .c-accordion-menu__submenu {
       transition: ease 2s;
     }  
-    
-.c-notifications-hidden-theme {
+.c-notifications {
+  width: 200px;
+  padding: 10px;
+  background: $cyan;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  z-index: 9999;
+
+  &-hidden-theme {
   position: absolute;
   display: none;
   left: 80px;
+  }
 }
 .admin-editor__instruments {
   position: absolute;
