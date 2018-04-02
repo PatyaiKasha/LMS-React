@@ -55,7 +55,7 @@ const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) =
           </ul>
       </div>
 
-      <Link to="/tests/tasks">
+      <Link to="/test/tasks">
         <button className="button-big">Пройти ещё раз</button>
       </Link>
   </div>

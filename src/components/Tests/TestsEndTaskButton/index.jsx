@@ -5,7 +5,7 @@ import './styles.scss';
 
 
 const TestsEndTaskButton = ({onClick}) => (
-	<Link to="/tests/results">
+	<Link to="/test/results">
 		<button className="button-big t-btn__finish" onClick={onClick} >Завершить тест!</button>
 	</Link>
 );
