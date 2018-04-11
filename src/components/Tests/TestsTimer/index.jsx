@@ -22,7 +22,6 @@ class TestsTimer extends React.Component {
 			clearInterval(this.testsInterval);
 		}
 		else {
-
 			let minute = this.state.timerMinutes;
 			let second = this.state.timerSeconds;
 

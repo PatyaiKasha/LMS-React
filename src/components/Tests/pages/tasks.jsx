@@ -27,6 +27,7 @@ export default class TasksPageTests extends React.Component {
 
 
   render() {
+    console.log(this.state.timerSeconds);
     return (
 	    <div className='t-main-tests'>
 	    	<TestsHeader theme_number={testsData.theme_number} theme_title={testsData.theme_title} >
