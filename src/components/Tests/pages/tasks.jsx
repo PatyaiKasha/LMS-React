@@ -22,14 +22,15 @@ export default class TasksPageTests extends React.Component {
   onSubmitVariants = (tests) => {
     this.setState({
       userTestAnswers: tests
-    })
+    });
   };
+
 
   render() {
     return (
 	    <div className='t-main-tests'>
 	    	<TestsHeader theme_number={testsData.theme_number} theme_title={testsData.theme_title} >
-          <TestsTimer />
+          <TestsTimer stopInterval={this.props.stopInterval} />
         </TestsHeader>
         <TestsContentTasks question_quan={testsData.theme_tests.length} tests_list={testsData.theme_tests} selected_variants={this.onSubmitVariants} />
         <TestsFooter>

@@ -7,7 +7,7 @@ import left_arrow from '../assets/left_arrow.gif';
 import right_arrow from '../assets/right_arrow.gif';
 
 
-const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) => {
+const TestsContentResults = ({ question_quan, tests_list, prepared_variants, onClick }) => {
   
   let corectAnswers = tests_list.map((test, idx) => test.correctAnswer);
 
@@ -56,7 +56,7 @@ const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) =
       </div>
 
       <Link to="/tests/tasks">
-        <button className="button-big">Пройти ещё раз</button>
+        <button className="button-big" onClick={onClick}>Пройти ещё раз</button>
       </Link>
   </div>
   );
@@ -65,7 +65,12 @@ const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) =
 TestsContentResults.PropTypes = {
   question_quan: PropTypes.number.isRequired,
   tests_list: PropTypes.array.isRequired,
-  prepared_variants: PropTypes.array
+  prepared_variants: PropTypes.array,
+  onClick: PropTypes.func
+}
+
+TestsContentResults.defaulrProps = {
+  onClick: () => {}
 }
 
 export default TestsContentResults;
