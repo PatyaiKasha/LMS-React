@@ -19,8 +19,8 @@ const TestsContentResults = ({ question_quan, tests_list, prepared_variants, onC
     return sum + current;
   }, 0);
 
-  let remainingMinutes = testsData.theme_minutes - 1 - showMinutes;
-  let remainingSeconds = testsData.theme_seconds + 60 - showSeconds;
+  let remainingMinutes = testsData.theme_time.theme_minutes - 1 - showMinutes;
+  let remainingSeconds = testsData.theme_time.theme_seconds + 60 - showSeconds;
 
   console.log(compareAnswers);
 
