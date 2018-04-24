@@ -5,9 +5,10 @@ import decode from 'unescape';
 import './styles.scss';
 import left_arrow from '../assets/left_arrow.gif';
 import right_arrow from '../assets/right_arrow.gif';
+import testsData from '../testDatabase';
 
 
-const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) => {
+const TestsContentResults = ({ question_quan, tests_list, prepared_variants, onClick, showMinutes, showSeconds }) => {
   
   let corectAnswers = tests_list.map((test, idx) => test.correctAnswer);
 
@@ -18,13 +19,16 @@ const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) =
     return sum + current;
   }, 0);
 
+  let remainingMinutes = testsData.theme_time.theme_minutes - 1 - showMinutes;
+  let remainingSeconds = testsData.theme_time.theme_seconds + 60 - showSeconds;
+
   console.log(compareAnswers);
 
   return (
   	<div className="t-content t-content--margin">
       <div className="t-results">
           <p className="t-results__marks" id="result-test">{numOfCortAnsw}/{question_quan} баллов</p>
-          <p className="t-results__summ-time">пройдено за 14:25 минут</p>
+          <p className="t-results__summ-time">пройдено за {remainingMinutes} минут {remainingSeconds} секунд</p>
       </div>
 
       <div className="t-mistakes">
@@ -55,8 +59,8 @@ const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) =
           </ul>
       </div>
 
-      <Link to="/test/tasks">
-        <button className="button-big">Пройти ещё раз</button>
+      <Link to="/tests/tasks">
+        <button className="button-big" onClick={onClick}>Пройти ещё раз</button>
       </Link>
   </div>
   );
@@ -65,7 +69,12 @@ const TestsContentResults = ({ question_quan, tests_list, prepared_variants }) =
 TestsContentResults.PropTypes = {
   question_quan: PropTypes.number.isRequired,
   tests_list: PropTypes.array.isRequired,
-  prepared_variants: PropTypes.array
+  prepared_variants: PropTypes.array,
+  onClick: PropTypes.func
+}
+
+TestsContentResults.defaulrProps = {
+  onClick: () => {}
 }
 
 export default TestsContentResults;
