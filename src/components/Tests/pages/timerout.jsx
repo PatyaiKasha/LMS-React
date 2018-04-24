@@ -13,15 +13,15 @@ export default class TimeoutPageResults extends React.Component {
   render() {
     return (
 	    <div className='t-main-tests'>
-	    	<TestsHeader theme_number={testsData.theme_number} theme_title={testsData.theme_title} >
-          <span className="t-main-span">
-            <span className="t-timer__minutes">00</span>: <span className="t-timer__seconds">00</span>
-          </span>
-        </TestsHeader>
-        <TestsContentTimeout />
-        <TestsFooter>
-          <TestsGoToHWButton />
-        </TestsFooter>
+	        <TestsHeader theme_number={testsData.theme_number} theme_title={testsData.theme_title} >
+                <span className="t-main-span">
+                    <span className="t-timer__minutes">00</span>: <span className="t-timer__seconds">00</span>
+                </span>
+            </TestsHeader>
+            <TestsContentTimeout />
+            <TestsFooter>
+            <TestsGoToHWButton />
+            </TestsFooter>
 	    </div>
     );
   }
