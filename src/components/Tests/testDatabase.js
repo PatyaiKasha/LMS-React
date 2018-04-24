@@ -1,7 +1,11 @@
 export default {
 	theme_number: 'Тема 2',
 	theme_title: '[ XXXXXXX _ ]',
-	theme_time: '15 мин',
+	theme_time: {
+		theme_minutes: '1',
+		theme_seconds: '00'
+	},
+	
 	theme_tests: [
 	    {
 	    	"id": 1,

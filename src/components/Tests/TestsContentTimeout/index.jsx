@@ -21,7 +21,7 @@ const TestsContentTimeout = (props) => {
           Вы не успели пройти тест! Результат не засчитан!
       </div>
 
-      <Link to="/tests/tasks">
+      <Link to="/test/tasks">
         <button className="button-big">Пройти ещё раз</button>
       </Link>
   </div>

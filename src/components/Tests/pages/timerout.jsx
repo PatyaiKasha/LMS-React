@@ -20,7 +20,7 @@ export default class TimeoutPageResults extends React.Component {
             </TestsHeader>
             <TestsContentTimeout />
             <TestsFooter>
-            <TestsGoToHWButton />
+                <TestsGoToHWButton />
             </TestsFooter>
 	    </div>
     );

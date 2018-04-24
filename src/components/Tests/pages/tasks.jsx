@@ -83,7 +83,7 @@ export default class TasksPageTests extends React.Component {
 
     if (endInterval === true) {
       return (
-        <Redirect to="/tests/timeout" />
+        <Redirect to="/test/timeout" />
       );
     }
     else {
